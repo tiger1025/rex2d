@@ -1,0 +1,34 @@
+<html>
+	<head>
+      <!-- include REX2D -->
+  		<script type="text/javascript" src="../Rex2D.js"></script>
+  		<script type="text/javascript">
+
+  		function Draw()
+  		{
+        // fill background
+  			SetColor(0,0,0);
+  			FillRect(0,0,GetWidth(),GetHeight());
+        // draw text "hello world"
+  			SetColor(255,255,255);
+  			DrawText("Hello world!",40,40);
+  		}
+
+  		function Init()
+  		{
+        // Init canvas
+  			RexInit("my_canvas");
+  			RexResize(640,420);
+        // Set draw function, and time interval
+  			RexInterval("Draw()",20);
+  		}
+
+  		</script>
+	</head>
+
+  <!-- Start initialization on load -->
+	<body onload="Init()">
+	<canvas id="my_canvas"></canvas>
+	</body>
+
+</html>
